@@ -1,123 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>KRT Solutions | Home Services</title>
-  <meta name="description" content="TV, AC, Plumbing, Cleaning & Home Services in Bangalore">
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #333;
-    }
-    header {
-      background: #0a58ca;
-      color: #fff;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
-    header p {
-      margin: 10px 0 20px;
-      font-size: 18px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 14px 22px;
-      margin: 8px;
-      background: #25d366;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .btn.call {
-      background: #ff9800;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 25px;
-      text-align: center;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    .card h3 {
-      margin-top: 10px;
-    }
-    .why {
-      background: #fff;
-      margin-top: 40px;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-    footer {
-      background: #0a58ca;
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-    .sticky {
-      position: fixed;
-      bottom: 15px;
-      right: 15px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KrtSilkSarees | Pure Handwoven Silk</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; }
+
+        /* Header */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 40px;
+            border-bottom: 1px solid #eee;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #111;
+        }
+
+        nav a {
+            margin: 0 16px;
+            font-weight: 500;
+            color: #444;
+            cursor: pointer;
+        }
+
+        .actions a {
+            margin-left: 12px;
+            padding: 8px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .call-btn {
+            border: 1px solid #111;
+            color: #111;
+        }
+
+        .whatsapp-btn {
+            background: #25d366;
+            color: #fff;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 90px 20px;
+            text-align: center;
+            background: #faf7f2;
+        }
+
+        .hero h1 {
+            font-size: 38px;
+            margin-bottom: 12px;
+            color: #111;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            margin-top: 24px;
+            background: #111;
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Grid Layouts */
+        .section-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 28px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+
+        /* Category Card */
+        .category-card {
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            background: #fff;
+            transition: box-shadow 0.3s;
+        }
+
+        .category-card:hover {
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        /* Product Card */
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 14px;
+            padding: 16px;
+            background: #fff;
+        }
+
+        .img-placeholder {
+            width: 100%;
+            aspect-ratio: 3/4;
+            background: #f0f0f0;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+        }
+
+        .price {
+            font-weight: 700;
+            font-size: 20px;
+            color: #b12704;
+            margin: 8px 0;
+        }
+
+        .enquire-btn {
+            display: block;
+            margin-top: 12px;
+            background: #25d366;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        /* Trust Section */
+        .trust {
+            background: #fdfdfd;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .trust ul {
+            list-style: none;
+            padding: 0;
+            display: inline-block;
+            text-align: left;
+        }
+
+        .trust li {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #444;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid #eee;
+            margin-top: 40px;
+            color: #777;
+            background: #fff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header { padding: 16px 20px; flex-direction: column; gap: 15px; }
+            .hero h1 { font-size: 28px; }
+            nav { margin-bottom: 10px; }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-  <h1>KRT Solutions</h1>
-  <p>All Home Services at Your Doorstep</p>
-  <a class="btn" href="https://wa.me/919972491965?text=Hi%20I%20need%20home%20service">WhatsApp Now</a>
-  <a class="btn call" href="tel:9972491965">Call Now</a>
+<header class="header">
+  <div class="logo">KrtSilkSarees</div>
+
+  <nav>
+    <a>Home</a>
+    <a>Collections</a>
+    <a>Contact</a>
+  </nav>
+
+  <div class="actions">
+    <a href="tel:+919972491965" class="call-btn">📞 Call</a>
+    <a
+      href="https://wa.me/919972491965?text=Hello%20I%20am%20interested%20in%20your%20silk%20sarees"
+      target="_blank"
+      class="whatsapp-btn">
+      💬 WhatsApp
+    </a>
+  </div>
 </header>
 
-<div class="container">
-  <h2 style="text-align:center;">Our Services</h2>
-  <div class="services">
-    <div class="card"><h3>TV Service</h3></div>
-    <div class="card"><h3>AC Service</h3></div>
-    <div class="card"><h3>Painting</h3></div>
-    <div class="card"><h3>Plumber</h3></div>
-    <div class="card"><h3>Cleaning</h3></div>
-    <div class="card"><h3>House Keeping</h3></div>
-  </div>
+<section class="hero">
+  <h1>Pure Silk Sarees from Weavers</h1>
+  <p>Authentic • Handwoven • Direct from Manufacturer</p>
 
-  <div class="why">
-    <h2>Why Choose KRT Solutions?</h2>
-    <ul>
-      <li>✔ Trusted & Experienced Technicians</li>
-      <li>✔ Quick Response</li>
-      <li>✔ Affordable Pricing</li>
-      <li>✔ Bangalore Based Services</li>
-    </ul>
-  </div>
-</div>
+  <a
+    href="https://wa.me/919972491965?text=Hi%20I%20want%20to%20see%20your%20latest%20silk%20sarees"
+    target="_blank"
+    class="hero-btn">
+    Enquire on WhatsApp
+  </a>
+</section>
 
-<footer>
-  <p>📞 9972491965 | KRT Solutions</p>
+<section class="section-container">
+  <h2>Our Collections</h2>
+  <div class="grid">
+    <div class="category-card">Kanchipuram Silk</div>
+    <div class="category-card">Banarasi Silk</div>
+    <div class="category-card">Soft Silk</div>
+    <div class="category-card">Bridal Special</div>
+  </div>
+</section>
+
+<section class="section-container">
+  <h2>Featured Sarees</h2>
+  <div class="grid">
+    <!-- Product 1 -->
+    <div class="product-card">
+      <div class="img-placeholder">Saree Image</div>
+      <h3>Traditional Kanchipuram</h3>
+      <p class="price">₹12,500</p>
+      <a href="wa.me" target="_blank" class="enquire-btn">
+        Enquire on WhatsApp
+      </a>
+    </div>
+
+    <!-- Product 2 -->
+    <div class="product-card">
+      <div class="img-placeholder">Saree Image</div>
+      <h3>Pure Soft Silk Blue</h3>
+      <p class="price">₹6,800</p>
+      <a href="wa.me" target="_blank" class="enquire-btn">
+        Enquire on WhatsApp
+      </a>
+    </div>
+
+    <!-- Product 3 -->
+    <div class="product-card">
+      <div class="img-placeholder">Saree Image</div>
+      <h3>Wedding Zari Special</h3>
+      <p class="price">₹18,200</p>
+      <a href="wa.me" target="_blank" class="enquire-btn">
+        Enquire on WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="trust">
+  <h2>Why Choose SriSilks</h2>
+  <ul>
+    <li>✔ Direct from Manufacturer</li>
+    <li>✔ 100% Pure Silk Guarantee</li>
+    <li>✔ Trusted by Families for Generations</li>
+    <li>✔ Custom Orders Available</li>
+  </ul>
+</section>
+
+<footer class="footer">
+  <p>📞 +91 9972491965</p>
+  <p>💬 WhatsApp for orders & enquiries</p>
+  <p>© 2025 KrtSilkSarees</p>
 </footer>
-
-<div class="sticky">
-  <a class="btn" href="https://wa.me/919972491965?text=Hi%20I%20need%20home%20service">WhatsApp</a>
-</div>
 
 </body>
 </html>
